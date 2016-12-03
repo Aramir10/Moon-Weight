@@ -11,19 +11,36 @@
 
 
 		  var user = prompt("input your weight ");
-			var peso = user;
+			var planet = parseInt(prompt("Chosse your planet 1 mars 2 for moon "));
+			var peso = parseInt(user);
+
 			var gearth = 9.8;
+
+
 			var gmars =3.7;
 			var luna = 1.6;
-			var final = peso * gmars/ gearth;
-			var final2 =  peso * luna/ gearth;
+			var final;
+			var name;
 			final = parseInt(final);
-      final2 = parseInt(final2);
+
+		if(planet === 1)
+       {
+        final = peso * gmars/ gearth;
+				name = "Mars";
+       }
+
+else if(planet === 2)
+      {
+        final = peso * luna/ gearth;
+				name = "Moon";
+			}
+			else
+			{
+				alert("thats  not valid ")
+			}
 
 
-
-
-			document.write(" Your weight in mars is " + final + " Your weight in the moon is " + final2 );
+			document.write(" Your weight in " + name +  " is " + final );
 		</script>
 	</body>
 </html>
